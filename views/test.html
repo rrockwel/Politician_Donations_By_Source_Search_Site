@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Congressional Campaign Funding Sources</title>
 	<link rel='stylesheet' href='static/css/styles.css'>
+
 </head>
 <body>
 <script type='module' src='static/getPoliticians.js'></script>
@@ -29,9 +30,9 @@
 		<option value="Republican">Republican</option>
 	</select>
 
-	<input id='submit' type='button' value='Search'>
-	<input id='clear' type='button' value='Clear'>
-	<input id='addToSelection' type='button' value='Add Selected'>
+	<button id='submit' type='button' value='Search'>Search</button>
+	<button id='clear' type='button' value='Clear'>Clear</button>
+		<button id='addToSelection' type='button' value='Add Selected'>Add To Selections</button>
 
 
 
@@ -53,6 +54,16 @@
 
 
 	
+<!-- jQuery -->
+<script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
 
+  <script>
+  	function removeDiv(el){
+  		$(el).parent('div').remove();
+  	}
+  </script>
 </body>
 </html>
