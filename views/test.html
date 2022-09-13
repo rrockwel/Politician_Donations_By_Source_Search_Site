@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Congressional Campaign Funding Sources</title>
+	<link rel='stylesheet' href='static/css/styles.css'>
+</head>
+<body>
+<script type='module' src='static/getPoliticians.js'></script>
+
+<!-- Section Where Currently Selected Politicians Are Displayed -->
+<div id="currentSelection">
+	
+</div>
+
+
+<!-- Form To Narrow Down Selection Of Politicians By HOUSE/SENATE, Party -->
+<form id='getPoliticians'>
+	<label for='congress'>Chamber</label>
+	<select name='congress' id='congress'>
+		<option value='House'>House</option>
+		<option value='Senate'>Senate</option>
+	</select>
+
+	<label for='party'>Party</label>
+	<select name='party' id='party'>
+		<option value="Democrat">Democrat</option>
+		<option value="Republican">Republican</option>
+	</select>
+
+	<input id='submit' type='button' value='Search'>
+	<input id='clear' type='button' value='Clear'>
+	<input id='addToSelection' type='button' value='Add Selected'>
+
+
+
+<!-- Politician(s) matching parameters are displayed in list form with checkboxes here -->
+<!-- When form is submitted, politicians who are selected (by checkbox) are added to div#current selection at top of page -->
+</form>
+
+<!-- Section below form where data from current politician(s) is displayed after it is fetched from openSecrets API -->
+
+
+
+
+
+<div id='legislatorInformation'>
+	<div id='name'></div>
+	<div id='party'></div>
+	<div id='birthDate'></div>
+</div>
+
+
+	
+
+</body>
+</html>
