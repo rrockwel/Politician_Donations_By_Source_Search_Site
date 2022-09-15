@@ -1,16 +1,20 @@
 import  senateDemocrats from '/static/arrays.js'
 
-// console.log(senateDemocrats)
-// console.log(senateDemocrats['senateDemocrats']);
-// console.log(senateDemocrats['senateRepublicans']);
+// expected js module script but server responded with MIME type 'application/json'. Strict MIME type checking is enforced for module scripts per HTML spec
+import members from '/static/members.js'
+// could just turn this into an array, even though this degrades performance as it's much easier to access json element with candidate name than search through entire array of names
+
 
 // Create results of search when "search" is clicked
 document.getElementById('submit').addEventListener('click', getPoliticians);
-// Clear 
-document.getElementById('clear').addEventListener('click', clearCandidateDiv)
+// Clear results of search
+document.getElementById('clear').addEventListener('click', clearCandidateDiv);
 // Add selected candidate to "selected" section
 document.getElementById('addToSelection').addEventListener('click', getCandidateCheckboxes)
 // Remove candidate from "selected" section
+
+// Search for donor information of candidates in 'currentSelection' when "Get Donor Information" button is clicked
+document.getElementById('getCandidateInfo').addEventListener('click', fetchCandidateInfo)
 
 
 
@@ -74,6 +78,8 @@ function getCandidateCheckboxes(){
 			let selectedCandidateDiv = document.createElement('div');
 			// create span for name
 			let innerSelectedCandidate = document.createElement('span');
+			innerSelectedCandidate.setAttribute('class','current-selection-candidate');
+			// innerSelectedCandidate.setAttribute('value',`${candidateCheckboxes[i].name}`);
 			// insert name into span
 			innerSelectedCandidate.innerHTML = candidateCheckboxes[i].name;
 			// append name span into div
@@ -90,6 +96,8 @@ function getCandidateCheckboxes(){
 			document.getElementById('currentSelection').appendChild(selectedCandidateDiv);
 		}
 	}
+
+	clearCandidateDiv();
 }
 
 // remove the candidateDiv div element from body of document
@@ -102,9 +110,39 @@ function clearCandidateDiv(){
 	}
 }
 
+function fetchCandidateInfo(){
+	// For each name in 'currentSelection'
+	// fetch url with name parameter
+	// wait for response
+	// add response data to 'candidateDonors' section
+	// then continue to fetch info for next name
+
+	// Get all spans with class 'current-selection-candidate'
+	let currentSelectionSpans = document.querySelectorAll('.current-selection-candidate');
+	// create empty array
+	let searchArray = [];
+	// push innerHTML (i.e. candidate name) into search array
+	currentSelectionSpans.forEach(el=>{
+		searchArray.push((el.innerHTML));
+	})
+	
+}
 
 
+
+
+
+
+let sampleArray = [ 'Mike D Rogers', 'Doris Matsui']
 // add selected candidates to "Selected Candidates Section"
-function addToSelectedCandidates(){
+async function getCandidatesDonorInfo(inputArray){
+	// Search members.json for records that match names passed in sampleArray
+	// Return CID from each candidate
+	for(let i = 0; i < inputArray.length; i++){
+
+	}
+
 
 }
+
+getCandidatesDonorInfo(sampleArray);
