@@ -23,6 +23,12 @@ function getPoliticians(){
 	if(document.getElementById('candidateDiv')){
 		clearCandidateDiv();
 	}
+	// Also, if "donorDiv" currently exists, remove it
+	if(document.getElementById('donorDiv')){
+		clearDonorDiv();
+	}
+
+
 	// Get Values search for in dropdowns
 	let chamber = document.getElementById('congress').value.toLowerCase();
 	let party = document.getElementById('party').value;
@@ -68,7 +74,11 @@ function getPoliticians(){
 function getCandidateCheckboxes(){
 	/// TODO: Check to see whether certain candidates have been added to "Selected" section already. If so, do not add them again ////
 
-	// Finda all existing inputs
+	// create currentSelection div
+	let currentSelection = document.createElement('div');
+	currentSelection.id='currentSelection';
+	document.body.prepend(currentSelection);
+	// Find all existing inputs
 	// TODO: make more specific so it only finds candidate checkboxes if other inputs exist.
 	let candidateCheckboxes = document.getElementsByTagName('input')
 	for(let i = 0; i < candidateCheckboxes.length; i++){
@@ -110,39 +120,87 @@ function clearCandidateDiv(){
 	}
 }
 
+function clearDonorDiv(){
+	// Make sure donorDiv exists before trying to remove it
+	if(document.getElementById('donorDiv')){
+		document.getElementById("donorDiv").remove();
+	}else{
+		console.log("Donor Div Does Not Exist")
+	}
+}
+
 function fetchCandidateInfo(){
 	// For each name in 'currentSelection'
 	// fetch url with name parameter
 	// wait for response
 	// add response data to 'candidateDonors' section
 	// then continue to fetch info for next name
-
+	// Start by clearing donorDiv
+	clearDonorDiv();
 	// Get all spans with class 'current-selection-candidate'
 	let currentSelectionSpans = document.querySelectorAll('.current-selection-candidate');
 	// create empty array
 	let searchArray = [];
+	
 	// push innerHTML (i.e. candidate name) into search array
 	currentSelectionSpans.forEach(el=>{
 		searchArray.push((el.innerHTML));
 	})
-	
-}
 
+	let donorDiv = document.createElement('div');
+	donorDiv.id = 'donorDiv'
+	document.body.appendChild(donorDiv)
 
-
-
-
-
-let sampleArray = [ 'Mike D Rogers', 'Doris Matsui']
-// add selected candidates to "Selected Candidates Section"
-async function getCandidatesDonorInfo(inputArray){
-	// Search members.json for records that match names passed in sampleArray
-	// Return CID from each candidate
-	for(let i = 0; i < inputArray.length; i++){
-
+	let cidArray = [];
+	for(let i = 0; i < searchArray.length; i++){
+		for(let j = 0; j < members.length; j++){
+			if(searchArray[i] == members[j]['firstlast']){
+				cidArray.push(members[j]['cid'])
+			}
+		}
 	}
 
+	if(cidArray.length>2){
+		alert("Please Only Search For 2 Candidates At A Time.");
+	}else{
+		for(let i = 0; i< cidArray.length; i++){
+			fetch(`https://www.opensecrets.org/api/?output=json&method=candContrib&cid=${cidArray[i]}&apikey=fba2513a673668cadd3ad0a3525965e6`)
+			.then(response=>{
+				return response.json();
+			})
+			.then(data=>{
+				console.log("Data: ",data);
+				console.log("Contributors Array: ", data['response']['contributors']['contributor']);
+				let candName = data['response']['contributors']['@attributes']['cand_name'];
+				let candNameDiv = document.createElement('div');
+				candNameDiv.setAttribute('class','cand-name');
+				let candNameNameDiv = document.createElement('div');
+				candNameNameDiv.innerHTML = `${candName}`
+				candNameDiv.appendChild(candNameNameDiv);
 
+				let contributorsArray = data['response']['contributors']['contributor'];
+				for (let i = 0; i < contributorsArray.length; i++){
+					let orgName = contributorsArray[i]['@attributes']['org_name'];
+					let total = contributorsArray[i]['@attributes']['total'];
+					let fromPACs = contributorsArray[i]['@attributes']['pacs'];
+
+					let orgDiv = document.createElement('div');
+					orgDiv.setAttribute('class','donor-org');
+					orgDiv.innerHTML = `${orgName}`;
+					let totalDiv = document.createElement('div');
+					totalDiv.setAttribute('class','donor-org-total');
+					totalDiv.innerHTML = `Total Donated: ${total}`;
+					
+					candNameDiv.appendChild(orgDiv);
+					candNameDiv.appendChild(totalDiv);
+					document.body.appendChild(candNameDiv);
+					}
+				donorDiv.appendChild(candNameDiv)
+
+				})
+				.catch(err=>{
+					console.log(err);
+				})
+		}
+	}
 }
-
-getCandidatesDonorInfo(sampleArray);
