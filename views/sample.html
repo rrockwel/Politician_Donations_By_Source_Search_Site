@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Congressional Campaign Funding Sources</title>
+	<link rel='stylesheet' href='static/css/styles.css'>
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+	<form class='border col-lg-4 p-3 m-2'>
+	<h3 class='ml-2'>Search For Candidates</h3>
+	<div class="btn-group ml-2 mb-2">
+		<input type="radio" class='btn-check' id='senate'  name='chamber' checked>
+		<label for="senate" class="btn btn-outline-primary">Senate</label>
+		<input type="radio" class='btn-check' id='house' name='chamber'>
+		<label for="house" class="btn btn-outline-primary">House</label>
+	</div>
+	<div class="btn-group ml-2 mb-2">
+		<input type="radio" class='btn-check' id='democrat'  name='party' checked>
+		<label for="democrat" class="btn btn-outline-primary">Democrat</label>
+		<input type="radio" class='btn-check' id='republican' name='party'>
+		<label for="republican" class="btn btn-outline-primary">Republican</label>
+	</div>
+	<div class='btn btn-success' id=''>Search Candidates</div>
+	
+
+	
+
+</form>
+
+<div class="col-lg-7 border m-2 p-3">
+		<h3>Selected Candidates</h3>
+
+		<div><span>1.</span></div>
+		<div><span>2.</span></div>
+
+
+		<div class="btn-group ml-2 mb-2">
+		<input type="radio" class='btn-check' id='topContributors'  name='donationsSource' checked>
+		<label for="topContributors" class="btn btn-outline-primary">Top Contributors</label>
+		<input type="radio" class='btn-check' id='contributorsByIndusty' name='donationsSource'>
+		<label for="contributorsByIndusty" class="btn btn-outline-primary">Contributors By Industry</label>
+	</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="container" id="candidateDiv">
+	<div class='btn-group'>
+		<div class="d-flex flex-wrap justify-content-center btn-groip">
+			<input type="checkbox" class="btn-check" value="" id='Alma Adams'>
+			<label for="Alma Adams" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check" value="" id='Pete Aguilar'>
+			<label for="Pete Aguilar" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check col-xs-12" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check col-xs-12" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check col-xs-12" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check col-xs-12" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check col-xs-12" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check col-xs-12" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Alma Adams</label>
+			<input type="checkbox" class="btn-check col-xs-12" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Pete Aguilar</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Colin Allred</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Jake Auchincloss</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Cindy Axne</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Nanette Barragan</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Karen Bass</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Joyce Beatty</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Ami Bera</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Don Beyer</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Sanford Bishop</label>
+			<input type="checkbox" class="btn-check" value="" id=''>
+			<label for="" class="btn btn-outline-primary m-1">Earl Blumenauer</label>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<div class="container mt-3" id='donors-top-contributors'>
+
+	<!-- Top Individual Contributors -->
+	<div class="row">
+	<div class='fs-2 m-2'>Top Contributors</div>
+		<div class="col">
+			<ul class="list-group">
+				<li class='list-group-item text-center fs-4'>Joyce Beatty (D)</li>
+				<li class="list-group-item">Democracy Engine<span style='float: right'>$75,848</span></li>
+				<li class="list-group-item">Nationwide<span style='float: right'>$25,960</span></li>
+				<li class="list-group-item">Blackstone Group<span style='float: right'>$25,200</span></li>
+				<li class="list-group-item">Ohio State University<span style='float: right'>$18,700</span></li>
+				<li class="list-group-item">Huntington Bancshares<span style='float: right'>$18,100</span></li>
+				<li class="list-group-item">Covermymeds<span style='float: right'>$16,810</span></li>
+				<li class="list-group-item">Rock Holdings<span style='float: right'>$16,800</span></li>
+				<li class="list-group-item">L Brands<span style='float: right'>$16,478</span></li>
+				<li class="list-group-item">Service Employees International Union<span style='float: right'>$15,025</span></li>
+				<li class="list-group-item">KeyCorp<span style='float: right'>$13,500</span></li>
+			</ul>
+		</div>
+		<div class="col">
+			<ul class="list-group">
+				<li class='list-group-item text-center fs-4'>Carolyn Bourdeaux (D)</li>
+				<li class="list-group-item">Georgia State University<span style='float: right'>$77,986</span></li>
+				<li class="list-group-item">Emory University<span style='float: right'>$50,406</span></li>
+				<li class="list-group-item">Motley Rice LLC<span style='float: right'>$28,250</span></li>
+				<li class="list-group-item">Georgia Tech<span style='float: right'>$24,510</span></li>
+				<li class="list-group-item">Alphabet Inc<span style='float: right'>$23,818</span></li>
+				<li class="list-group-item">Harvard University<span style='float: right'>$23,207</span></li>
+				<li class="list-group-item">US Dept of Health & Human Services<span style='float: right'>$20,720</span></li>
+				<li class="list-group-item">Democracy Engine<span style='float: right'>$20,104</span></li>
+				<li class="list-group-item">White & Case<span style='float: right'>$17,745</span></li>
+				<li class="list-group-item">University of Georgia<span style='float: right'>$17,699</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+	<!-- End of Top Individual Contributors -->
+
+	<!-- Top Industries -->
+<div class = 'container mt-3' id='donors-top-industries'>
+	<div class="row">
+	<div class="fs-2 m-2">Top Industries</div>
+		<div class="col">
+			<ul class="list-group">
+				<li class='list-group-item text-center fs-4'>Joyce Beatty (D)</li>
+				<li class="list-group-item"><span style='float: right'</span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+			</ul>
+		</div>
+		<div class="col">
+			<ul class="list-group">
+				<li class='list-group-item text-center fs-4'>Carolyn Bourdeaux (D)</li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+				<li class="list-group-item"><span style='float: right'></span></li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+
+	<!-- End of Top Industries -->
+
+
+
+<!-- Bootstrap JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

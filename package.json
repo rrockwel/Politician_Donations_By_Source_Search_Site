@@ -2,9 +2,9 @@
   "name": "Open_Secrets_API",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,9 @@
     "livereload": "^0.9.3",
     "node-fetch": "^1.0.0",
     "nodemon": "^2.0.19"
+  },
+  "engines":{
+    "node":"14.5.0"
   },
   "type":"commonjs"
 }
